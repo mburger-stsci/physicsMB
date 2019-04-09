@@ -5,8 +5,13 @@ Physics helper functions for nexoclom and general use
     :target: http://www.astropy.org
     :alt: Powered by Astropy Badge
 
-file: README.rst
+Package Contents
+----------------
 
+atomicmass : Returns the atomic mass of an atom or molecule. This is really
+just a wrapper for
+`periodictable <https://periodictable.readthedocs.io/en/latest/index.html>`_
+but returns the mass as an astropy quantity.
 
 License
 -------
