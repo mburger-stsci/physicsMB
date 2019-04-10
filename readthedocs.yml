@@ -1,9 +1,6 @@
 build:
     image: latest
 
-conda:
-    file: .rtd-environment.yml
-
 python:
     version: 3.6
     install:
@@ -11,6 +8,9 @@ python:
         - method: conda
           path: .
     setup_py_install: true
+
+conda:
+    file: .rtd-environment.yml
 
 formats:
     - pdf
