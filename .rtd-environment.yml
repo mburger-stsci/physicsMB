@@ -1,15 +1,15 @@
 name: physicsMB
 
 channels:
-    - astropy
-    - pypi
+    - defaults
 
 dependencies:
     - python>=3.6
     - astropy
-    - Cython
     - matplotlib
     - numpy
-    - sphinx-astropy
     - pip:
-        - dependency_from_pip
+      - sphinx
+      - sphinx_rtd_theme
+      - stsci_rtd_theme
+      - sphinx-astropy

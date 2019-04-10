@@ -1,16 +1,7 @@
-build:
-    image: latest
-
+type: sphinx
 python:
-    version: 3.6
-    install:
-        - requirements: docs/requirements.txt
-        - method: conda
-          path: .
+    version: 3
     setup_py_install: true
-
 conda:
-    file: .rtd-environment.yml
+    file: doc/.rtd-environment.yml
 
-formats:
-    - pdf
