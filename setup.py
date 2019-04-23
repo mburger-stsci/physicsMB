@@ -57,11 +57,9 @@ if _cfg_long_description:
 elif os.path.exists('LONG_DESCRIPTION.rst'):
     with open('LONG_DESCRIPTION.rst') as f:
         LONG_DESCRIPTION = f.read()
-
 elif len(glob.glob(readme_glob)) > 0:
     with open(glob.glob(readme_glob)[0]) as f:
         LONG_DESCRIPTION = f.read()
-
 else:
     # Get the long description from the package's docstring
     __import__(PACKAGENAME)
@@ -73,13 +71,18 @@ else:
 builtins._ASTROPY_PACKAGE_NAME_ = PACKAGENAME
 
 # VERSION should be PEP440 compatible (http://www.python.org/dev/peps/pep-0440)
-VERSION = metadata.get('version', '0.0.dev')
+# VERSION = metadata.get('version', '0.0.dev')
+
+# Get version info from __init__.py
+for line in open(f'{PACKAGENAME}/__init__.py', 'r').readlines():
+    if 'version' in line:
+        VERSION = line.split('=')[1].strip().replace("'", "").replace('"', '')
 
 # Indicates if this version is a release version
 RELEASE = 'dev' not in VERSION
 
-if not RELEASE:
-    VERSION += get_git_devstr(False)
+# if not RELEASE:
+#     VERSION += get_git_devstr(False)
 
 # Populate the dict of setup command overrides; this should be done before
 # invoking any other functionality from distutils since it can potentially
@@ -133,7 +136,8 @@ setup(name=PACKAGENAME,
       version=VERSION,
       description=DESCRIPTION,
       scripts=scripts,
-      install_requires=[s.strip() for s in metadata.get('install_requires', 'astropy').split(',')],
+      install_requires= [s.strip() for s in
+                 metadata.get('install_requires', 'astropy').split(',')],
       author=AUTHOR,
       author_email=AUTHOR_EMAIL,
       license=LICENSE,
