@@ -11,4 +11,4 @@ git add --all
 git commit -m "$comment"
 git push
 
-#twine upload dist/*
+twine upload dist/*
