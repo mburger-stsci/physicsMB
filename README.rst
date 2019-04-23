@@ -13,6 +13,8 @@ just a wrapper for
 `periodictable <https://periodictable.readthedocs.io/en/latest/index.html>`_
 but returns the mass as an astropy quantity.
 
+Documentation at <https://physicsmb.readthedocs.io/en/latest/>.
+
 License
 -------
 
