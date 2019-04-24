@@ -1,9 +1,15 @@
-"""Return the atomic mass of an atom or molecule.
+"""
+``atomicmass`` - Return the atomic mass of an atom or molecule.
 
 This is really just a wrapper for
 `periodictable
 <https://periodictable.readthedocs.io/en/latest/index.html>`_
-but returns the mass as an astropy quantity.
+but returns the mass as an `astropy quantity
+<http://docs.astropy.org/en/stable/units/index.html>`_.
+
+:Authors: Matthew Burger
+
+:License: :doc:`LICENSE`
 """
 
 import sys
@@ -15,10 +21,19 @@ import astropy.units as u
 def atomicmass(species):
     """Return the atomic mass of an atom or molecule.
 
-    This is really just a wrapper for
-    `periodictable
-    <https://periodictable.readthedocs.io/en/latest/index.html>`_
-    but returns the mass as an astropy quantity.
+    Parameters
+    ----------
+    species
+        Chemical formula requested species. See `periodictable
+        <https://periodictable.readthedocs.io/en/latest/index.html>`_
+        for formatting options.
+
+    Returns
+    -------
+    output
+        atomicmass of ``species`` as an astropy quantity with units = AMU
+        :math:`(1\, \mathrm{AMU} = 1.660539 \\times 10^{−27}\, \mathrm{kg})`
+
     """
     el = [e.symbol for e in pt.elements]
     if species in el:
