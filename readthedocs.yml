@@ -5,3 +5,11 @@ python:
 conda:
     file: .rtd-environment.yml
 
+# Required
+version: 1
+
+# Build documentation in the docs/ directory with Sphinx
+sphinx:
+  configuration: docs/conf.py
+
+
