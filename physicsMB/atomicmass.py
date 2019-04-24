@@ -19,7 +19,7 @@ import astropy.units as u
 
 
 def atomicmass(species):
-    """Return the atomic mass of an atom or molecule.
+    r"""Return the atomic mass of an atom or molecule.
 
     Parameters
     ----------
@@ -32,7 +32,7 @@ def atomicmass(species):
     -------
     output
         atomicmass of ``species`` as an astropy quantity with units = AMU
-        :math:`(1\, \mathrm{AMU} = 1.660539 \\times 10^{−27}\, \mathrm{kg})`
+        :math:`(1\, \mathrm{AMU} = 1.660539 \times 10^{−27}\, \mathrm{kg})`
 
     """
     el = [e.symbol for e in pt.elements]
