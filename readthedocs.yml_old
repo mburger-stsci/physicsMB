@@ -13,5 +13,4 @@ python:
 conda:
     file: .rtd-environment.yml
 
-formats:
-    - pdf
+formats: all
