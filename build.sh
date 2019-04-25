@@ -2,7 +2,8 @@
 rm dist/*.*
 
 # Build the distribution
-python setup.py sdist bdist_wheel bdist_egg
+#python setup.py sdist bdist_wheel
+python setup.py bdist_wheel
 
 # Push to github
 echo "Enter commit comment: "

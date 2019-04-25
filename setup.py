@@ -38,6 +38,7 @@ from setuptools import setup
 import builtins
 builtins._ASTROPY_SETUP_ = True
 
+
 from astropy_helpers.setup_helpers import (register_commands, get_debug_option,
                                            get_package_info)
 from astropy_helpers.git_helpers import get_git_devstr
@@ -138,6 +139,7 @@ setup(name=PACKAGENAME,
       scripts=scripts,
       install_requires= [s.strip() for s in
                  metadata.get('install_requires', 'astropy').split(',')],
+#      setup_requires=['pbr'], pbr=True,
       author=AUTHOR,
       author_email=AUTHOR_EMAIL,
       license=LICENSE,
