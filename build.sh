@@ -1,5 +1,5 @@
 # Remove old versions
-rm dist/*.*
+#rm dist/*.*
 
 # Build the distribution
 #python setup.py sdist bdist_wheel

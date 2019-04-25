@@ -139,7 +139,7 @@ setup(name=PACKAGENAME,
       scripts=scripts,
       install_requires= [s.strip() for s in
                  metadata.get('install_requires', 'astropy').split(',')],
-      setup_requires=['pbr'], pbr=True,
+#      setup_requires=['pbr'], pbr=True,
       author=AUTHOR,
       author_email=AUTHOR_EMAIL,
       license=LICENSE,
