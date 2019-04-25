@@ -66,9 +66,6 @@ else:
     package = sys.modules[PACKAGENAME]
     LONG_DESCRIPTION = package.__doc__
 
-print(LONG_DESCRIPTION)
-assert 0
-
 # Store the package name in a built-in variable so it's easy
 # to get from other parts of the setup infrastructure
 builtins._ASTROPY_PACKAGE_NAME_ = PACKAGENAME
