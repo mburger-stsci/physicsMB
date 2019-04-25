@@ -14,7 +14,7 @@ python:
     version: 3.6
     install:
       - method: pip
-        path: docs #/requirements.txt
+        path: docs/requirements.txt
     system_packages: true
 
 conda:
