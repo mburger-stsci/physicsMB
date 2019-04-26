@@ -15,6 +15,11 @@ but returns the mass as an astropy quantity.
 
 Documentation at https://physicsmb.readthedocs.io/en/latest/.
 
+Installation
+------------
+
+>>> pip install physicsMB
+
 License
 -------
 

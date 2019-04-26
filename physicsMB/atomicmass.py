@@ -21,15 +21,15 @@ import astropy.units as u
 def atomicmass(species):
     r"""Return the atomic mass of an atom or molecule.
 
-    Parameters
-    ----------
+    **Parameters**
+
     species
         Chemical formula requested species. See `periodictable
         <https://periodictable.readthedocs.io/en/latest/index.html>`_
         for formatting options.
 
-    Returns
-    -------
+    **Returns**
+
     output
         atomicmass of ``species`` as an astropy quantity with units = AMU
         :math:`(1\, \mathrm{AMU} = 1.660539 \times 10^{−27}\, \mathrm{kg})`
